@@ -4,7 +4,8 @@ import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
 const Post = ({ post }) => {
-  const { id, title, body } = post;
+console.log(post);
+  const { id, title, body,userId } = post;
   
   const navigate = useNavigate()
   
@@ -15,6 +16,7 @@ const Post = ({ post }) => {
   return (
     <div className="post">
       <h4>Id: {id}</h4>
+      <h5>UserId: {userId }</h5>
       <h3>Title: {title}</h3>
       <h5>Body: {body}</h5>
       <Link to={`/post/${id}`}>Details</Link>
